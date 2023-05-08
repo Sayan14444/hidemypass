@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">HideMyPass</h1>
+    <a href="https://www.buymeacoffee.com/sayan144" target="_blank" class="buy-me-a-coffee">Buy Me A Coffee</a>
+  </header>
+  <div class="container">
+    <div class="about">
+      <h2 class="section-title">About The Tool</h2>
+      <p>HideMyPass is a website that generates strong passwords to help you keep your online accounts secure. Using a strong password is important because it makes it more difficult for hackers to guess or crack your password and gain access to your accounts.</p><br>
+      <p>Our password generator creates passwords that are difficult to guess by combining random letters, numbers, and symbols. You can customize the length and character types of the password to suit your needs. Once generated, you can easily copy the password to your clipboard and use it wherever you need.</p><br>
+      <p>HideMyPass was created by Sayan to help people keep their online accounts secure. We hope our website makes it easier for you to create strong passwords and protect your valuable information.</p>
+    </div>
+    <div class="password">
+      <input type="text" id="password" readonly>
+      <button id="copy" onclick="copyPassword()" class="hidden">Copy to Clipboard</button>
+    </div>
+    <button id="generate" onclick="generatePassword()">Generate Password</button>
+    <div class="options">
+      <div class="option">
+        <label for="upper-case">
+          <input type="checkbox" id="upper-case" checked> Include Alpha Upper (A-Z)
+        </label>
+      </div>
+      <div class="option">
+        <label for="lower-case">
+          <input type="checkbox" id="lower-case" checked> Include Alpha Lower (a-z)
+        </label>
+      </div>
+      <div class="option">
+        <label for="numbers">
+          <input type="checkbox" id="numbers" checked> Include Numbers (0-9)
+        </label>
+      </div>
+      <div class="option">
+        <label for="symbols">
+          <input type="checkbox" id="symbols" checked> Include Symbols
+        </label>
+      </div>
+      <div class="option">
+        <label for="length">Length:</label>
+        <input type="number" id="length" min="6" max="30" value="12">
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
